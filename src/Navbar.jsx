@@ -12,7 +12,7 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} alt="" />
-          <button onClick={handleLinks}>
+          <button className="nav-toggle" onClick={handleLinks}>
             <FaBars />
           </button>
         </div>
@@ -22,7 +22,7 @@ const Navbar = () => {
               {links.map((link) => {
                 const { url, text, id } = link;
                 return (
-                  <li key={id}>
+                  <li className="links" key={id}>
                     <a href={url}>{text}</a>
                   </li>
                 );
